@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pulchritude Florist</title>
+    <style>
+        :root{
+            --pink: #CE96A6; 
+        }
+
+        *{
+        margin:0; padding:0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        outline: none; border:none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+        } 
+
+        html{
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        overflow-x: hidden;
+        }
+
+        section{
+        padding:2rem 9%;
+        }
+
+        .heading{
+            text-align: center;
+            font-size: 4rem;
+            color:#262730;
+            padding: 2rem;
+            margin: 4rem 0;
+            background: rgba(255, 51,153,.05);   
+        }
+
+        .heading span{
+            color: #CE96A6;  
+        }
+
+        .btn{
+            display: inline-block;
+            margin: 1rem;
+            border-radius: 5rem;
+            background: #262730;
+            color: #E8D7F1;
+            padding: .9rem 3.5rem;
+            cursor: pointer;
+            font-size: 1.7rem;
+        }
+
+        .btn:hover{
+            background:#CE96A6;
+        }
+        header{
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: #8a817c;
+            padding: 2rem 9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: 0.5rem 1 rem rgba(0,0,0,.1);
+        }
+
+        header .logo{
+            font-size: 3rem;
+            color: #04151F;
+            font-weight: bolder;
+        }
+
+        header .logo span {
+        color:var(--pink);
+        }
+
+        header .navbar a{
+            font-size: 2rem;
+            padding: 0 1.5rem;
+            color: #262730;
+        }
+
+        header .navbar a:hover{
+            color: var(--pink)
+        }
+
+        header .icons a{
+            font-size: 3rem;
+            color: #04151F;
+            margin-left: 1.5rem;
+        }
+
+        header .icons a:hover{
+            color: #be95c4;
+        }
+
+        header #toggler{
+                display: none;
+        }
+        header .fa-bars{
+            font: 3rem;
+            color: #333;
+            border-radius: .5rem;
+            padding: .5rem 1.5rem;
+            cursor: pointer;
+            border: .1rem solid rgba(0,0,0,.3)
+        }
+
+
+        .about .row{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 2rem 0;
+            padding-bottom: 3rem;
+        }
+
+        .about .row .content{
+            flex:1 1 40rem;
+        }
+
+        .about .row .content h3{
+            font-size: 3rem;
+            color: #262730;
+        }
+
+        .about .row .content p{
+            font-size: 1.5rem;
+            color: #b8c0ff;
+            padding: 1rem 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width:991px) {
+            html{
+                font-size: 55%;
+            }   
+
+            header{
+                padding: 2rem;
+            }
+
+            section{
+                padding:2rem;
+            }
+        }
+
+        .footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #262730;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer  .box-container .box a:hover{
+    color: #be95c4;
+    text-decoration: underline;
+}
+
+ .footer .box-container .box img{
+    margin-top: 1rem;
+ }
+
+ .footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+    color: #262730;
+    border-top: .1rem solid #04151F;
+ }
+
+ .footer .credit span{
+    color: #ca72db;
+ }
+
+        @media (max-width:768px) {
+            header .fa-bars{
+                display:block;
+            }
+
+            header .navbar{
+                position: absolute;
+                top:100%; left:0; right:0;
+                background:#eee;
+                border-top: .1rem solid rgba(0,0,0,.1);
+                clip-path: polygon(0 0, 100% 0, 0 0);
+            }
+
+            header #toggler:checked ~ .navbar{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
+
+            header .navbar a{
+                margin: 1.5rem;
+                padding: 1.5rem;
+                background:#be95c4;
+                border: .1rem solid rgba(0,0,0,.1);
+                display: block;
+            }
+        }
+
+        @media (max-width:450px){
+            html{
+                font-size: 50%;
+            }   
+            .heading{
+                font-size: 3rem;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Pulchritude <span>Florist</span></div>
+        <nav class="navbar">
+            <a href="flowers.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <a href="#" class="fa fa-search"></a>
+            <a href="#" class="fa fa-user"></a>
+            <a href="#" class="fa fa-shopping-cart"></a>
+            <label for="toggler" class="fa fa-bars"></label>
+        </div>
+        <input type="checkbox" id="toggler">
+    </header>
+
+    <section class="about">
+        <h1 class="heading">About <span>Us</span></h1>
+        <div class="row">
+            <div class="content">
+                <h3>Welcome to Pulchritude Florist!</h3>
+                <p>Our journey began with a passion for flowers and a desire to bring the beauty of nature into people's lives. We believe that flowers have the power to express emotions, brighten days, and create unforgettable memories. Our dedicated team of expert florists is committed to crafting stunning floral arrangements that exceed your expectations. Whether you're celebrating a special occasion or simply want to add a touch of elegance to your space, Pulchritude Florist is here to help.</p>
+                <p>Our commitment to quality and customer satisfaction is unwavering. We source our flowers from the best growers to ensure freshness and longevity in every arrangement. Our talented florists pour their creativity and expertise into each design, creating beautiful and unique floral compositions. At Pulchritude Florist, we believe in making the flower-buying experience convenient and enjoyable, which is why we offer easy online ordering and reliable delivery services. Join us on this beautiful journey and let us help you celebrate life's moments with the perfect flowers.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript code can be added here if needed in the future
+    </script>
+
+   
+<!--footer section stars-->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">products</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorite</a>
+        </div>
+
+        <div class="box">
+            <h3> contact info </h3>
+            <a href="#">+62-812-345-6780</a>
+            <a href="#">Pulchritude@gmail.com</a>
+            <a href="#">jakarta, indonesia</a>
+            <img src="../flowers/images/icons/paypay.png">
+        </div>
+
+    </div>
+    <div class="credit">created by <span> Indah Noviantin</span>|001202200164</div>
+
+</section>
+<!--footer section ends-->
+</body>
+</html>
